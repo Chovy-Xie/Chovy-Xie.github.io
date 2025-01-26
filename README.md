@@ -1,2 +1,2 @@
 # Chovy-Xie.github.io
-> My GitHub Pages site
+> My GitHub Pages site - Yixi Xie
