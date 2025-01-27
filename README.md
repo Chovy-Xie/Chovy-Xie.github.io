@@ -1,5 +1,5 @@
 # Chovy-Xie.github.io
-> My GitHub Pages - [Welcome](/welcome.html)
+> My GitHub Pages Site - [Welcome/Home Page](/welcome.html)
 
 ## Assignments Links
 
