@@ -27,7 +27,8 @@ h2 {
 pre {
     background-color: #FFFFA8;
     font-style: italic;
-    margin: 1em 5em;
+    margin-left: 4%;
+    padding: 5px;
 }
 
 a:link, a:visited {
