@@ -1,5 +1,5 @@
 # Chovy-Xie.github.io
-> My GitHub Pages Site - [Welcome/Home Page](/welcome.html)
+> My GitHub Pages Site
 
 ## Assignments Links
 
@@ -9,7 +9,7 @@
 
 
 ## Assignment 2
-> [Index Page](/csc372-hw/assignment-2/index.html), [Recipe Page](/csc372-hw/assignment-2/pie.html), [return](#assignments-links)
+> [Index Page](/csc372-hw/assignment-2/home.html), [Recipe Page](/csc372-hw/assignment-2/pie.html), [return](#assignments-links)
 
 ### Index Page
  - <b>Relative URLs:</b> links to 'Recipe Page'
