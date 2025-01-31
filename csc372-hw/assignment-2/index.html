@@ -7,34 +7,40 @@
   This is the index.html page. Your front page must contain a link to pie.html. The file must also be at least 20 lines long 
   and must contain at least 4 different HTML elements in its body. It also may not significantly borrow content from your pie.html. 
 -->
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index Page</title>
+    <title>My GitHub Page Site</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Front Page</h1>
+    <nav>
+      <!-- ... -->
+    </nav>
 
-    <!-- Links -->
-    <h2><a href="pie.html" target="_blank" title="Link to Grandma's Lemon Meringue Pie">Grandma's Lemon Meringue Pie</a></h2>
-    <ul>
-        <li><a href="pie.html#ingredients" target="_blank" title="Bookmark to Another Page's Heading">Ingredients</a></li>
-        <li><a href="pie.html#directions" target="_blank" title="Bookmark to Another Page's Heading">Directions</a></li>
-        <li><a href="pie.html#user-comments" target="_blank" title="Bookmark to Another Page's Heading">User Comments</a></li>
-        <li><a href="pie.html#links" target="_blank" title="Bookmark to Another Page's Heading">Links</a></li>
-    </ul>
-    
+    <main class="container">
+      <div class="content">
+        <div class="icon" title="Yixi Xie">
+          <img src="/Yixi.jpeg" alt="Yixi Xie">
+        </div>
+        <h1 id="name">Yixi Xie</h1>
+        <h3><a href="pie.html" target="_blank" title="Link to Grandma's Lemon Meringue Pie">Grandma's Lemon Meringue Pie</a></h3>
+        <div class="assignment-2">  
+          <ul>
+            <a href="pie.html#ingredients" target="_blank" title="Bookmark to Another Page's Heading">Ingredients</a>
+            <a href="pie.html#directions" target="_blank" title="Bookmark to Another Page's Heading">Directions</a>
+            <a href="pie.html#user-comments" target="_blank" title="Bookmark to Another Page's Heading">User Comments</a>
+            <a href="pie.html#links" target="_blank" title="Bookmark to Another Page's Heading">Links</a>
+          </ul>
+        </div>  
+        <a href="https://github.com/Chovy-Xie/Chovy-Xie.github.io/tree/main" title="Yixi-Xie.github.io" id="github"><i class="fab fa-github"></i></a>
+      </div>
+    </main>
 
-    <footer>
-        <p>Assignment 2 - Yixi Xie 
-            <a href="https://github.com/Chovy-Xie/Chovy-Xie.github.io/tree/main" target="_blank" title="My GitHub Page Site" id="github">
-                <i class="fab fa-github"></i>
-            </a>
-        </p>
+    <footer title="footer">
+      <p>CSC-372-01 Web Development · @<a href="https://github.com/Chovy-Xie" title="GitHub Profile">Chovy-Xie</a></p>
     </footer>
 </body>
 </html>
