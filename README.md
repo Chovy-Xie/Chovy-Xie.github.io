@@ -3,6 +3,9 @@
 
 ## Term Project
  - [iTea](/term-project/frontend/html/index.html)
+ - [Menu](/term-project/frontend/html/menu.html)
+ - [Cart](/term-project/frontend/html/cart.html)
+ - [Admin](/term-project/frontend/html/admin/admin-products.html)
 
 
 ## Assignments Links

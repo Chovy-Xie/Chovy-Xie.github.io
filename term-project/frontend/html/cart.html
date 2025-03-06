@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
+    <meta name="author" content="Yixi Xie">
+    <meta name="description" content="Shopping Cart">
+    <title>iTea | Shopping Cart</title>
+    <link rel="icon" href="/term-project/frontend/images/tea.ico">
+    <link rel="stylesheet" href="/term-project/frontend/css/cart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <nav class="nav-bar">
+        <a href="index.html" target="_self"><img id="logo" src="/term-project/frontend/images/tea.ico" alt="Logo"></a>
+
+        <div class="nav-links">
+            <a href="index.html" target="_blank">Home</a>
+            <a href="menu.html" target="_blank">Menu</a>
+        </div>
+
+        <div class="nav-sign">
+            <a href="#" class="sign-btn">Sign in</a>
+            <a href="#" class="join-btn">Join now</a>
+        </div>
+    </nav>
+
+    <!-- Shopping Cart -->
+    <main class="cart-container">
+        <h1>Your Cart</h1>
+        
+        <div class="cart-items">
+            <!-- Bubble Tea -->
+            <div class="cart-item">
+                <img src="/term-project/frontend/images/bubble-tea.webp" alt="Bubble Tea" class="item-image">
+                <div class="item-details">
+                    <h3>Bubble Tea</h3>
+                    <p class="price">$5.99</p>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn" onclick="decrementQuantity(0)">-</button>
+                        <input type="number" value="2" min="1" class="quantity-input">
+                        <button class="quantity-btn" onclick="incrementQuantity(0)">+</button>
+                    </div>
+                    <p class="item-total">Total: $11.98</p>
+                    <button class="remove-btn">Remove</button>
+                </div>
+            </div>
+
+            <!-- Green Tea -->
+            <div class="cart-item">
+                <img src="/term-project/frontend/images/green-tea.webp" alt="Green Tea" class="item-image">
+                <div class="item-details">
+                    <h3>Green Tea</h3>
+                    <p class="price">$4.49</p>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn" onclick="decrementQuantity(1)">-</button>
+                        <input type="number" value="1" min="1" class="quantity-input">
+                        <button class="quantity-btn" onclick="incrementQuantity(1)">+</button>
+                    </div>
+                    <p class="item-total">Total: $4.49</p>
+                    <button class="remove-btn">Remove</button>
+                </div>
+            </div>
+
+            <!-- Matcha -->
+            <div class="cart-item">
+                <img src="/term-project/frontend/images/matcha.webp" alt="Matcha" class="item-image">
+                <div class="item-details">
+                    <h3>Matcha</h3>
+                    <p class="price">$5.49</p>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn" onclick="decrementQuantity(2)">-</button>
+                        <input type="number" value="1" min="1" class="quantity-input">
+                        <button class="quantity-btn" onclick="incrementQuantity(2)">+</button>
+                    </div>
+                    <p class="item-total">Total: $5.49</p>
+                    <button class="remove-btn">Remove</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="cart-summary">
+            <h2>Order Summary</h2>
+            <div class="summary-line">
+                <span>Subtotal:</span>
+                <span>$21.96</span>
+            </div>
+            <div class="summary-line">
+                <span>Tax (6.75%):</span>
+                <span>$1.48</span>
+            </div>
+            <div class="summary-line">
+                <span>Delivery Fee:</span>
+                <span>$2.99</span>
+            </div>
+            <div class="summary-line total">
+                <span>Total:</span>
+                <span>$26.43</span>
+            </div>
+            <button class="checkout-btn">Proceed to Checkout</button>
+        </div>
+    </main>
+
+    <script src="/term-project/frontend/js/cart.js"></script>
+</body>
+</html>
