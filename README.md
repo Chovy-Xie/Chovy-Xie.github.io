@@ -10,8 +10,10 @@
 
 ## Assignments Links
  - [Assignment 2: Recipe](/csc372-hw/assignment-2/home.html)
-    - Index Page (Front Page).
+    - Home Page (Front Page).
     - Pie Recipe Page.
  - [Assignment 3: Dine on Campus](/csc372-hw/assignment-3/home.html)
-    - Index Page
+    - Home Page
     - Meal Plan Recommendations
+ - [Assignment 4: Callbacks - Rock, Paper, Scissors](/csc372-hw/assignment-4/home.html)
+    - Home Page

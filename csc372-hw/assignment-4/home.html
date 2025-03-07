@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!--
+  Name: Yixi Xie
+  Date: 03.06.2025
+  CSC 372-01
+
+  This is the home.html page for my assignment 4 of web development work. 
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 4 | Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <section id="player-section">
+            <h2>Your Move</h2>
+            <div id="moves">
+                <figure>
+                    <img src="images/rock.png" alt="Rock" class="move-option" data-move="rock">
+                    <figcaption>Rock</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/paper.png" alt="Paper" class="move-option" data-move="paper">
+                    <figcaption>Paper</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/scissors.png" alt="Scissors" class="move-option" data-move="scissors">
+                    <figcaption>Scissors</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section id="computer-section">
+            <h2>Computer's Move</h2>
+            <div id="computer-move">
+                <img src="images/question-mark.png" alt="Question Mark" id="computer-choice">
+            </div>
+        </section>
+
+        <section id="outcome-section">
+            <h2>Outcome</h2>
+            <p id="result">Choose your move to start the game!</p>
+        </section>
+
+        <section id="score-section">
+            <h2>Score</h2>
+            <div id="score-board">
+                <p>Wins: <span id="wins">0</span></p>
+                <p>Losses: <span id="losses">0</span></p>
+                <p>Ties: <span id="ties">0</span></p>
+            </div>
+            <button id="reset-score">Reset Score</button>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 

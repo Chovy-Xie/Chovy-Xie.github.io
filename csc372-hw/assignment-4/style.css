@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+#container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section {
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#moves {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+figure {
+    margin: 0;
+    text-align: center;
+    cursor: pointer;
+}
+
+.move-option {
+    width: 100px;
+    height: 100px;
+    border: 3px solid transparent;
+    border-radius: 10px;
+    transition: border-color 0.3s ease;
+}
+
+.move-option.selected {
+    border-color: #4CAF50;
+}
+
+#computer-move {
+    text-align: center;
+}
+
+#computer-choice {
+    width: 100px;
+    height: 100px;
+}
+
+#outcome-section {
+    text-align: center;
+    background-color: #f8f8f8;
+}
+
+#score-board {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+#reset-score {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#reset-score:hover {
+    background-color: #45a049;
+}
