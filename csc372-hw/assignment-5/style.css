@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f6f8fa;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.search-container {
+    margin: 20px 0;
+}
+
+#username {
+    padding: 10px;
+    width: 200px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #2ea44f;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#repo-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.repo-card {
+    background: white;
+    border: 1px solid #e1e4e8;
+    border-radius: 6px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.repo-card h2 {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.repo-card p {
+    margin: 5px 0;
+    font-size: 0.9em;
+    color: #586069;
+}
+
+.repo-link {
+    color: #0366d6;
+    text-decoration: none;
+}
+
+.repo-link:hover {
+    text-decoration: underline;
+}
+
+.language-list {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.language-tag {
+    background: #f1f8ff;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 0.8em;
+    color: #0366d6;
+}
