@@ -1,12 +1,7 @@
-// Default username (your GitHub username)
-const defaultUsername = 'chovy-xie';
-
-// Function to format dates
 function formatDate(dateString) {
     return new Date(dateString).toLocaleDateString();
 }
 
-// Function to create repository card
 function createRepoCard(repo) {
     const card = document.createElement('div');
     card.className = 'repo-card';
@@ -22,20 +17,16 @@ function createRepoCard(repo) {
         <p>Watchers: ${repo.watchers_count}</p>
         <p>Language: ${repo.language || 'Not specified'}</p>
     `;
-
     return card;
 }
 
-// Function to fetch and display repositories
 async function fetchRepos() {
-    const username = document.getElementById('username').value || defaultUsername;
     const gallery = document.getElementById('repo-gallery');
-    gallery.innerHTML = ''; // Clear existing content
 
     try {
-        const response = await fetch(`https://api.github.com/users/${username}/repos?sort=updated&per_page=20`);
+        const response = await fetch('https://api.github.com/users/chovy-xie/repos?sort=updated&per_page=20');  // fetch the repositories of my GitHub
         if (!response.ok) {
-            throw new Error('User not found');
+            throw new Error('Failed to fetch repositories');
         }
         
         const repos = await response.json();
@@ -49,5 +40,4 @@ async function fetchRepos() {
     }
 }
 
-// Load default user's repositories when page loads
 document.addEventListener('DOMContentLoaded', fetchRepos);

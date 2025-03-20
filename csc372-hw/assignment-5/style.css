@@ -20,26 +20,6 @@ header {
     margin-bottom: 30px;
 }
 
-.search-container {
-    margin: 20px 0;
-}
-
-#username {
-    padding: 10px;
-    width: 200px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-}
-
-button {
-    padding: 10px 20px;
-    background-color: #2ea44f;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
 #repo-gallery {
     display: flex;
     flex-wrap: wrap;
