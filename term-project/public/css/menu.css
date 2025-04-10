@@ -1,0 +1,234 @@
+:root {
+    --background-color: #fff;
+    --link-color: #EC5E2C;
+    --text-color: #1a1a1a;
+    --placeholder: #ccc;
+    --card-background: #333;
+    font-family: "SoDoSans", Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+#logo {
+    height: 50px;
+    width: auto;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: flex-start;
+    padding: 0 40px;
+    align-items: center;
+    height: 100px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    background-color: var(--background-color);
+}
+
+.nav-links {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    margin-left: 40px;
+    margin-right: auto;
+}
+
+.nav-links a {
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: var(--text-color);
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    padding: 8px 0;
+    position: relative;
+}
+
+.nav-links a:hover {
+    color: var(--link-color);
+    transition: color 0.2s ease;
+}
+
+.nav-search {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+}
+
+.search-icon {
+    position: absolute;
+    left: 12px;
+    color: var(--text-color);
+    font-size: 14px;
+}
+
+.search-input {
+    padding: 8px 16px 8px 36px;
+    border-radius: 20px;
+    border: 1px solid var(--text-color);
+    color: var(--placeholder);
+    background-color: transparent;
+    font-size: 14px;
+    width: 240px;
+    transition: all 0.2s ease;
+}
+
+.search-input:focus {
+    outline: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: var(--text-color);
+}
+
+.nav-sign {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.sign-btn, .join-btn {
+    padding: 7px 16px;
+    border-radius: 50px;
+    border: 1.5px solid var(--text-color);
+    font-weight: 600;
+    font-size: 14px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.sign-btn {
+    color: var(--text-color);
+    background: transparent;
+}
+
+.sign-btn:hover {
+    background: rgba(0, 0, 0, 0.06);
+}
+
+.join-btn {
+    color: white;
+    background: #000;
+}
+
+.join-btn:hover {
+    background: var(--card-background);
+}
+
+/* Sidebar Styles */
+.menu-container {
+    display: flex;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    gap: 40px;
+}
+
+.menu-sidebar {
+    width: 260px;
+    flex-shrink: 0;
+}
+
+.menu-sidebar h2 {
+    font-size: 19px;
+    font-weight: 600;
+    margin: 30px 0 15px;
+    color: var(--text-color);
+}
+
+.menu-sidebar h2:first-child {
+    margin-top: 0;
+}
+
+.menu-sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-sidebar li {
+    margin: 8px 0;
+}
+
+.menu-sidebar a {
+    color: #666;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.2s ease;
+}
+
+.menu-sidebar a:hover {
+    color: var(--link-color);
+}
+
+/* Main Content Styles */
+.menu-content {
+    flex: 1;
+}
+
+.menu-content h1 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: var(--text-color);
+}
+
+.menu-section h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: var(--text-color);
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+    transition: background-color 0.2s ease;
+}
+
+.menu-item:hover {
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+.menu-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #f4f4f4;
+}
+
+.menu-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.menu-item h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-color);
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-container {
+        flex-direction: column;
+    }
+
+    .menu-sidebar {
+        width: 100%;
+    }
+}

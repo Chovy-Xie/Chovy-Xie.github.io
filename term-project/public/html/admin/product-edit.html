@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Yixi Xie">
+    <meta name="description" content="Admin Product Edit">
+    <title>Admin | Product Edit</title>
+    <link rel="icon" href="/term-project/frontend/images/tea.ico">
+    <link rel="stylesheet" href="/term-project/frontend/css/styles.css">
+    <link rel="stylesheet" href="/term-project/frontend/css/admin.css">
+</head>
+<body>
+    <nav class="nav-bar">
+        <a href="index.html" target="_self"><img id="logo" src="/term-project/frontend/images/tea.ico" alt="Logo"></a>
+
+        <div class="nav-links">
+            <a href="/term-project/frontend/html/index.html" target="_blank">Home</a>
+            <a href="admin-upload.html" target="_self">Upload</a>
+            <a href="admin-products.html" target="_self">List</a>
+        </div>
+    </nav>
+
+    <main class="admin-container">
+        <h1>Edit Product</h1>
+        <form id="editProductForm" class="admin-form">
+            <div class="form-group">
+                <label for="productId">Product ID:</label>
+                <input type="text" id="productId" name="productId" readonly>
+            </div>
+
+            <div class="form-group">
+                <label for="name">Product Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="price">Price ($):</label>
+                <input type="number" id="price" name="price" step="0.01" min="0" required>
+            </div>
+
+            <div class="form-group">
+                <label for="category">Category:</label>
+                <select id="category" name="category" required>
+                    <option value="">New</option>
+                    <option value="">Milk Tea</option>
+                    <option value="">Hot Tea</option>
+                    <option value="">Ice Tea</option>
+                    <option value="">Coffee</option>
+                    <option value="">Lemonade</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="image">Image Path:</label>
+                <input type="text" id="image" name="image" required>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn-primary">Save Changes</button>
+                <button type="button" class="btn-secondary" onclick="window.location.href='admin-products.html'">Cancel</button>
+            </div>
+        </form>
+    </main>
+
+    <script src="/term-project/frontend/js/admin-product-edit.js"></script>
+</body>

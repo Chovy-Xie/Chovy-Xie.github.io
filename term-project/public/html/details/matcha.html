@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
+    <meta name="author" content="Yixi Xie">
+    <meta name="description" content="Product Details Page">
+    <title>Product | iTea</title>
+    <link rel="icon" href="/term-project/frontend/images/tea.ico">
+    <link rel="stylesheet" href="/term-project/frontend/css/details.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <nav class="nav-bar">
+        <a href="index.html" target="_self"><img id="logo" src="/term-project/frontend/images/tea.ico" alt="Logo"></a>
+
+        <div class="nav-links">
+            <a href="/term-project/frontend/html/index.html" target="_blank" title="Home">Home</a>
+            <a href="/term-project/frontend/html/menu.html" target="_blank" title="Menu">Menu</a>
+            <a href="/term-project/frontend/html/cart.html" target="_blank">Shopping Cart</a>
+        </div>
+
+        <div class="nav-search">
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            <input type="text" placeholder="Explore..." class="search-input">
+        </div>
+
+        <div class="nav-sign">
+            <a href="#" class="sign-btn">Sign in</a>
+            <a href="#" class="join-btn">Join now</a>
+        </div>
+    </nav>
+
+    <!-- Product Details -->
+    <div class="product-container">
+        <div class="product-grid">
+            <!-- Product Image -->
+            <div class="product-image">
+                <img src="/term-project/frontend/images/matcha.webp" alt="Matcha">
+            </div>
+    
+            <!-- Product Details -->
+            <div class="product-details">
+                <h1>Matcha</h1>
+                
+                <div class="product-rating">
+                    <div class="stars">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <span class="review-count">(999+)</span>
+                </div>
+    
+                <div class="product-price">
+                    <span class="regular-price">$5.49</span>
+                </div>
+    
+                <div class="purchase-options">
+                    <div class="subscription-option">
+                        <label class="radio-container">
+                            <span class="radio-label"><strong>Quantity</strong></span>
+                        </label>
+                        <div class="delivery-dropdown">
+                            <select>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="product-actions">
+                    <button class="btn-primary">ADD TO CART</button>
+                    <button class="btn-secondary">BUY NOW</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

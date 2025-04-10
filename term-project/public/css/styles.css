@@ -1,0 +1,152 @@
+:root {
+    --background-color: #fff;
+    --link-color: #EC5E2C;
+    --text-color: #1a1a1a;
+    --placeholder: #ccc;
+    --card-background: #333;
+    font-family: "SoDoSans", Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+#logo {
+    height: 50px;
+    width: auto;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: flex-start;
+    padding: 0 40px;
+    align-items: center;
+    height: 100px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    background-color: var(--background-color);
+}
+
+.nav-links {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    margin-left: 40px;
+    margin-right: auto;
+}
+
+.nav-links a {
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: var(--text-color);
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    padding: 8px 0;
+    position: relative;
+}
+
+.nav-links a:hover {
+    color: var(--link-color);
+    transition: color 0.2s ease;
+}
+
+.nav-sign {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.sign-btn, .join-btn {
+    padding: 7px 16px;
+    border-radius: 50px;
+    border: 1.5px solid var(--text-color);
+    font-weight: 600;
+    font-size: 14px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.sign-btn {
+    color: var(--text-color);
+    background: transparent;
+}
+
+.sign-btn:hover {
+    background: rgba(0, 0, 0, 0.06);
+}
+
+.join-btn {
+    color: white;
+    background: #000;
+}
+
+.join-btn:hover {
+    background: var(--card-background);
+}
+
+.poster {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    background-color: white;
+    margin-bottom: 10px;
+}
+
+.poster-image {
+    flex: 1;
+    width: 100%;
+}
+
+.poster-image img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.new-feature {
+    padding: 10px;
+    text-align: center;
+}
+
+.new-feature h3 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.feature-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 40px 0;
+    padding: 0 40px;
+}
+
+.feature-item {
+    flex: 0 1 300px;
+    padding: 0 40px;
+    text-align: center;
+}
+
+.feature-image {
+    width: 300px;
+    height: 300px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.feature-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.feature-text h4 {
+    font-size: 1.2em;
+    margin-bottom: 8px;
+    color: var(--text-color);
+}
+
+.feature-text p {
+    color: var(--placeholder);
+    line-height: 1.5;
+}
