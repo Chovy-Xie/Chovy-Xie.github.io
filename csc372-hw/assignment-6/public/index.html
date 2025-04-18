@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jokebook</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Jokebook</h1>
+        <nav>
+            <ul id="categories-menu"></ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="category-search-section">
+            <h2>Search by Category</h2>
+            <form id="category-search-form">
+                <div class="search-container">
+                    <input type="text" id="category-search-input" placeholder="Enter category name" required>
+                    <button type="submit">Search</button>
+                </div>
+            </form>
+        </section>
+
+        <section id="random-joke-section">
+            <h2>Random Joke</h2>
+            <div class="joke-card" id="random-joke">
+                <p class="joke-placeholder">Loading a random joke...</p>
+            </div>
+            <button id="new-random-joke">Get Another Random Joke</button>
+        </section>
+
+        <section id="category-jokes-section" class="hidden">
+            <h2 id="category-title">Category Jokes</h2>
+            <div id="category-jokes"></div>
+        </section>
+
+        <section id="add-joke-section">
+            <h2>Add a New Joke</h2>
+            <form id="add-joke-form">
+                <div class="form-group">
+                    <label for="joke-category">Category:</label>
+                    <select id="joke-category" required></select>
+                </div>
+                <div class="form-group">
+                    <label for="joke-setup">Setup:</label>
+                    <textarea id="joke-setup" required placeholder="Enter joke setup"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="joke-delivery">Delivery:</label>
+                    <textarea id="joke-delivery" required placeholder="Enter joke punchline"></textarea>
+                </div>
+                <button type="submit">Add Joke</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 

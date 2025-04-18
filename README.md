@@ -6,6 +6,7 @@
  - [Assignment 3: Dine on Campus](/csc372-hw/assignment-3/index.html)
  - [Assignment 4: Callbacks - Rock, Paper, Scissors](/csc372-hw/assignment-4/index.html)
  - [Assignment 5: GitHub Gallery](/csc372-hw/assignment-5/index.html)
+ - [Assignment 6: Jokebook](/csc372-hw/assignment-6/)
 
 
 ## Term Project
