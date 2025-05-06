@@ -1,0 +1,35 @@
+Project Overview
+
+For your term project, you will create a simple online store. 
+The goal for you is to practice all the topics you will learn in this class. 
+Additionally, the skills you practice in your individual assignments will have direct applicability to your project.
+
+
+Description
+
+You will have a lot of creative freedom in completing this project. You will make a web app for an online store. 
+The app should allow users to assembly a shopping cart of items to purchase. It should also allow shoppers to check out 
+and also show their transaction histories. Additionally, the app should allow the store owner/admin to add or modify listings. 
+Product and shopper information should be saved in a relational database. There is a list of all the basic requirements, 
+but feel free to add any functionality or implement any cool ideas you have for the website.
+
+These are the requirements that you will need to satisfy:
+- The website should have a home page displaying a selection of available products (trending/newest, etc.)
+- A product listing page with multiple products from a category or search e.t.c.
+- A product details page for each product.
+- A shopping cart page.
+- An order history page.
+- An admin page for adding or modifying listings.
+- A navigation menu that includes links to all the pages on your website.
+- A footer section which shows the copyright notice, and any other about info you would like to include.
+- All the pages on your website should have the same layout. All pages should reasonably have the same thematic look and feel, depending on the content.
+- Incorporation of a third party API of your choice to enhance the app. For example, Google Maps API for the location of the user.
+
+
+Methodology
+
+Page Prototypes: HTML, CSS, JS
+Database schema: SQL
+Routers, Controllers and Views: Node, Express
+User Interface enhancements: JS
+Web Services Incorporation: 3rd party API

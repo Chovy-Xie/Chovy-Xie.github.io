@@ -2,105 +2,292 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Yixi Xie">
     <meta name="description" content="Shopping Cart">
-    <title>iTea | Shopping Cart</title>
-    <link rel="icon" href="/term-project/frontend/images/tea.ico">
-    <link rel="stylesheet" href="/term-project/frontend/css/cart.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <title>Shopping Cart - iTea</title>
+    <link rel="icon" href="/images/tea.ico">
+    <link rel="stylesheet" href="/css/cart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav class="nav-bar">
-        <a href="index.html" target="_self"><img id="logo" src="/term-project/frontend/images/tea.ico" alt="Logo"></a>
-
-        <div class="nav-links">
-            <a href="index.html" target="_blank">Home</a>
-            <a href="menu.html" target="_blank">Menu</a>
+    <nav class="navbar">
+        <div class="container">
+            <a href="/index.html" class="logo">
+                <img src="/images/tea.ico" alt="Logo">
+                <span>iTea</span>
+            </a>
+            
+            <div class="nav-links">
+                <a href="/index.html" class="nav-link">Home</a>
+                <a href="/html/menu.html" class="nav-link">Menu</a>
+                <a href="/html/order-history.html" class="nav-link" id="order-history-link" style="display: none;">Orders</a>
+            </div>
+            
+            <div class="user-section">
+                <a href="/html/admin/admin-products.html" class="btn admin-btn">Admin</a>
+                <a href="/html/login.html" class="btn login-btn" id="login-btn">Sign in</a>
+                <a href="/html/signup.html" class="btn signup-btn" id="signup-btn">Join now</a>
+                
+                <div class="user-profile" id="user-menu" style="display: none;">
+                    <button class="user-profile-btn">
+                        <i class="fas fa-user-circle"></i>
+                        <span id="username">User</span>
+                    </button>
+                    <div class="user-dropdown">
+                        <a href="profile.html">My Profile</a>
+                        <a href="order-history.html">Order History</a>
+                        <button id="logout-btn" class="logout-btn">Logout</button>
+                    </div>
+                </div>
+            </div>
+            
+            <button class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
-
-        <div class="nav-sign">
-            <a href="#" class="sign-btn">Sign in</a>
-            <a href="#" class="join-btn">Join now</a>
+        
+        <div class="mobile-menu">
+            <a href="/index.html">Home</a>
+            <a href="/html/menu.html">Menu</a>
+            <a href="/html/login.html" id="mobile-login-btn">Sign in</a>
+            <a href="/html/signup.html" id="mobile-signup-btn">Join now</a>
+            <a href="order-history.html" id="mobile-order-history" style="display: none;">Order History</a>
+            <a href="/html/admin/admin-products.html">Admin</a>
         </div>
     </nav>
 
-    <!-- Shopping Cart -->
-    <main class="cart-container">
-        <h1>Your Cart</h1>
+    <div class="cart-container">
+        <div class="cart-header">
+            <h1>Your Cart</h1>
+            <p>Review your items before checkout</p>
+        </div>
         
-        <div class="cart-items">
-            <!-- Bubble Tea -->
-            <div class="cart-item">
-                <img src="/term-project/frontend/images/bubble-tea.webp" alt="Bubble Tea" class="item-image">
-                <div class="item-details">
-                    <h3>Bubble Tea</h3>
-                    <p class="price">$5.99</p>
-                    <div class="quantity-controls">
-                        <button class="quantity-btn" onclick="decrementQuantity(0)">-</button>
-                        <input type="number" value="2" min="1" class="quantity-input">
-                        <button class="quantity-btn" onclick="incrementQuantity(0)">+</button>
-                    </div>
-                    <p class="item-total">Total: $11.98</p>
-                    <button class="remove-btn">Remove</button>
+        <div class="cart-empty" id="cart-empty" style="display: none;">
+            <div class="empty-cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+            </div>
+            <h2>Your cart is empty</h2>
+            <p>Looks like you haven't added any items to your cart yet.</p>
+            <a href="/html/menu.html" class="btn-continue-shopping">Continue Shopping</a>
+        </div>
+        
+        <div class="cart-content" id="cart-content">
+            <div class="cart-items-container">
+                <div class="cart-items-header">
+                    <h2>Cart Items</h2>
+                    <span class="cart-items-count" id="cart-items-count">0</span>
+                </div>
+                
+                <div class="cart-items" id="cart-items">
+                    <!-- Cart items will be populated here via JavaScript -->
+                    <div class="loading-cart">Loading your cart...</div>
                 </div>
             </div>
-
-            <!-- Green Tea -->
-            <div class="cart-item">
-                <img src="/term-project/frontend/images/green-tea.webp" alt="Green Tea" class="item-image">
-                <div class="item-details">
-                    <h3>Green Tea</h3>
-                    <p class="price">$4.49</p>
-                    <div class="quantity-controls">
-                        <button class="quantity-btn" onclick="decrementQuantity(1)">-</button>
-                        <input type="number" value="1" min="1" class="quantity-input">
-                        <button class="quantity-btn" onclick="incrementQuantity(1)">+</button>
-                    </div>
-                    <p class="item-total">Total: $4.49</p>
-                    <button class="remove-btn">Remove</button>
+            
+            <div class="cart-summary">
+                <div class="cart-summary-header">
+                    <h2>Order Summary</h2>
                 </div>
-            </div>
-
-            <!-- Matcha -->
-            <div class="cart-item">
-                <img src="/term-project/frontend/images/matcha.webp" alt="Matcha" class="item-image">
-                <div class="item-details">
-                    <h3>Matcha</h3>
-                    <p class="price">$5.49</p>
-                    <div class="quantity-controls">
-                        <button class="quantity-btn" onclick="decrementQuantity(2)">-</button>
-                        <input type="number" value="1" min="1" class="quantity-input">
-                        <button class="quantity-btn" onclick="incrementQuantity(2)">+</button>
+                
+                <div class="cart-summary-content">
+                    <div class="summary-row">
+                        <span class="summary-label">Subtotal</span>
+                        <span class="summary-value" id="subtotal">$0.00</span>
                     </div>
-                    <p class="item-total">Total: $5.49</p>
-                    <button class="remove-btn">Remove</button>
+                    
+                    <div class="summary-row">
+                        <span class="summary-label">Tax</span>
+                        <span class="summary-value" id="tax">$0.00</span>
+                    </div>
+                    
+                    <div class="summary-row">
+                        <span class="summary-label">Shipping</span>
+                        <span class="summary-value" id="shipping">$0.00</span>
+                    </div>
+                    
+                    <div class="coupon-container">
+                        <h3>Apply Coupon</h3>
+                        <div class="coupon-form">
+                            <input type="text" id="coupon-input" class="coupon-input" placeholder="Enter coupon code">
+                            <button id="apply-coupon-btn" class="apply-coupon-btn">Apply</button>
+                        </div>
+                    </div>
+                    
+                    <div class="summary-row discount" id="discount-row" style="display: none;">
+                        <span class="summary-label">Discount</span>
+                        <span class="summary-value" id="discount">-$0.00</span>
+                    </div>
+                    
+                    <div class="summary-total">
+                        <span class="total-label">Total</span>
+                        <span class="total-value" id="total">$0.00</span>
+                    </div>
+                    
+                    <div class="checkout-btn-container">
+                        <button id="checkout-btn" class="checkout-btn">Proceed to Checkout</button>
+                    </div>
+                    
+                    <a href="/html/menu.html" class="continue-shopping">Continue Shopping</a>
                 </div>
             </div>
         </div>
-
-        <div class="cart-summary">
-            <h2>Order Summary</h2>
-            <div class="summary-line">
-                <span>Subtotal:</span>
-                <span>$21.96</span>
+    </div>
+    
+    <!-- Checkout Modal -->
+    <div id="checkout-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-header">
+                <h2>Checkout</h2>
             </div>
-            <div class="summary-line">
-                <span>Tax (6.75%):</span>
-                <span>$1.48</span>
+            
+            <div class="modal-body">
+                <div class="checkout-section">
+                    <h3>Shipping Information</h3>
+                    <form id="shipping-form" class="checkout-form">
+                        <div class="form-group">
+                            <label class="form-label" for="checkout-name">Full Name</label>
+                            <input type="text" id="checkout-name" class="form-input" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="checkout-email">Email</label>
+                            <input type="email" id="checkout-email" class="form-input" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="checkout-address">Address</label>
+                            <input type="text" id="checkout-address" class="form-input" required>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label" for="checkout-city">City</label>
+                                <input type="text" id="checkout-city" class="form-input" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label" for="checkout-state">State</label>
+                                <input type="text" id="checkout-state" class="form-input" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="checkout-zip">Zip Code</label>
+                            <input type="text" id="checkout-zip" class="form-input" required>
+                        </div>
+                    </form>
+                </div>
+                
+                <div class="checkout-section">
+                    <h3>Order Summary</h3>
+                    <div id="checkout-items" class="checkout-items">
+                        <!-- Items will be displayed here -->
+                    </div>
+                    
+                    <div class="checkout-summary">
+                        <div class="checkout-row">
+                            <span>Subtotal</span>
+                            <span id="checkout-subtotal">$0.00</span>
+                        </div>
+                        
+                        <div class="checkout-row">
+                            <span>Tax</span>
+                            <span id="checkout-tax">$0.00</span>
+                        </div>
+                        
+                        <div class="checkout-row">
+                            <span>Shipping</span>
+                            <span id="checkout-shipping">$0.00</span>
+                        </div>
+                        
+                        <div class="checkout-row" id="checkout-discount-row" style="display: none;">
+                            <span>Discount</span>
+                            <span id="checkout-discount">-$0.00</span>
+                        </div>
+                        
+                        <div class="checkout-total-row">
+                            <span>Total</span>
+                            <span id="checkout-total">$0.00</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="checkout-actions">
+                    <button id="back-to-cart-btn" class="back-to-cart-btn">Back to Cart</button>
+                    <button id="place-order-btn" class="place-order-btn">Place Order</button>
+                </div>
             </div>
-            <div class="summary-line">
-                <span>Delivery Fee:</span>
-                <span>$2.99</span>
-            </div>
-            <div class="summary-line total">
-                <span>Total:</span>
-                <span>$26.43</span>
-            </div>
-            <button class="checkout-btn">Proceed to Checkout</button>
         </div>
-    </main>
+    </div>
+    
+    <!-- Order Confirmation Modal -->
+    <div id="confirmation-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="confirmation-modal-content">
+                <div class="success-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <h2>Order Placed Successfully!</h2>
+                <p class="confirmation-message">Your order has been received and is being processed.</p>
+                <div class="confirmation-details">
+                    <p class="order-number-label">Order Number:</p>
+                    <p id="order-number">12345</p>
+                </div>
+                <p class="confirmation-message">A confirmation email has been sent to your email address.</p>
+                <a href="/index.html" class="continue-shopping-btn">Continue Shopping</a>
+            </div>
+        </div>
+    </div>
 
-    <script src="/term-project/frontend/js/cart.js"></script>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="/images/tea.ico" alt="iTea Logo">
+                <h2>iTea</h2>
+            </div>
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h3>Shop</h3>
+                    <ul>
+                        <li><a href="/html/menu.html">Menu</a></li>
+                        <li><a href="#">Locations</a></li>
+                        <li><a href="#">Gift Cards</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>About</h3>
+                    <ul>
+                        <li><a href="#">Our Story</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Social</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 iTea. All rights reserved.</p>
+            <div class="footer-bottom-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/auth-check.js"></script>
+    <script src="/js/cart.js"></script>
 </body>
 </html>

@@ -1,0 +1,61 @@
+<!-- Navigation Start -->
+<nav class="navbar">
+    <div class="container">
+        <div class="nav-logo">
+            <a href="index.html">
+                <img src="../public/images/logo.svg" alt="Cozy Tea Logo">
+                <span>Cozy Tea</span>
+            </a>
+        </div>
+        <div class="nav-links">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Shop</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Locations</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <div class="nav-actions">
+            <a href="#" class="nav-search">
+                <i class="fas fa-search"></i>
+            </a>
+            <a href="cart.html" class="nav-cart">
+                <i class="fas fa-shopping-bag"></i>
+                <span class="cart-count" id="cart-count">0</span>
+            </a>
+            <div class="user-menu">
+                <a href="login.html" class="btn btn-sign-in" id="sign-in-btn">Sign In</a>
+                <a href="signup.html" class="btn btn-join" id="join-btn">Join</a>
+                <div class="user-menu-logged-in" id="user-menu-logged-in" style="display: none;">
+                    <button class="user-profile-btn" id="user-profile-btn">
+                        <i class="fas fa-user-circle"></i>
+                        <span id="username-display">User</span>
+                    </button>
+                    <div class="user-dropdown" id="user-dropdown">
+                        <a href="profile.html">My Profile</a>
+                        <a href="order-history.html">Order History</a>
+                        <a href="#" id="logout-btn">Logout</a>
+                    </div>
+                </div>
+            </div>
+            <button class="mobile-menu-btn" id="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+</nav>
+<div class="mobile-menu" id="mobile-menu">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Shop</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Locations</a></li>
+        <li><a href="#">Contact</a></li>
+        <li class="mobile-sign-in"><a href="login.html">Sign In</a></li>
+        <li class="mobile-join"><a href="signup.html">Join</a></li>
+    </ul>
+</div>
+<!-- Navigation End --> 

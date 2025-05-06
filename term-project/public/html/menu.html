@@ -2,31 +2,69 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Yixi Xie">
     <meta name="description" content="Product List Page">
     <title>iTea | Menu</title>
-    <link rel="icon" href="/term-project/frontend/images/tea.ico">
-    <link rel="stylesheet" href="/term-project/frontend/css/menu.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="icon" href="/images/tea.ico">
+    <link rel="stylesheet" href="/css/menu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav class="nav-bar">
-        <a href="index.html" target="_self"><img id="logo" src="/term-project/frontend/images/tea.ico" alt="Logo"></a>
-
-        <div class="nav-links">
-            <a href="index.html" target="_blank" title="Home">Home</a>
-            <a href="cart.html" target="_blank">Shopping Cart</a>
+    <nav class="navbar">
+        <div class="container">
+            <a href="/index.html" class="logo">
+                <img src="/images/tea.ico" alt="Logo">
+                <span>iTea</span>
+            </a>
+            
+            <div class="nav-links">
+                <a href="/index.html" class="nav-link">Home</a>
+                <a href="cart.html" class="nav-link">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </a>
+                <a href="order-history.html" class="nav-link" id="order-history-link" style="display: none;">Orders</a>
+            </div>
+            
+            <div class="nav-search">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                <input type="text" placeholder="Explore..." class="search-input">
+            </div>
+            
+            <div class="user-section">
+                <a href="/html/admin/admin-products.html" class="btn admin-btn">Admin</a>
+                <a href="/html/login.html" class="btn login-btn" id="login-btn">Sign in</a>
+                <a href="/html/signup.html" class="btn signup-btn" id="signup-btn">Join now</a>
+                
+                <div class="user-profile" id="user-menu" style="display: none;">
+                    <button class="user-profile-btn">
+                        <i class="fas fa-user-circle"></i>
+                        <span id="username">User</span>
+                    </button>
+                    <div class="user-dropdown">
+                        <a href="profile.html">My Profile</a>
+                        <a href="order-history.html">Order History</a>
+                        <button id="logout-btn" class="logout-btn">Logout</button>
+                    </div>
+                </div>
+            </div>
+            
+            <button class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
-
-        <div class="nav-search">
-            <i class="fa-solid fa-magnifying-glass search-icon"></i>
-            <input type="text" placeholder="Explore..." class="search-input">
-        </div>
-
-        <div class="nav-sign">
-            <a href="#" class="sign-btn">Sign in</a>
-            <a href="#" class="join-btn">Join now</a>
+        
+        <div class="mobile-menu">
+            <a href="/index.html">Home</a>
+            <a href="cart.html">Cart</a>
+            <a href="/html/login.html" id="mobile-login-btn">Sign in</a>
+            <a href="/html/signup.html" id="mobile-signup-btn">Join now</a>
+            <a href="order-history.html" id="mobile-order-history" style="display: none;">Order History</a>
+            <a href="/html/admin/admin-products.html">Admin</a>
         </div>
     </nav>
 
@@ -52,28 +90,28 @@
                 <div class="menu-grid">
                     <div class="menu-item">
                         <div class="menu-image">
-                            <a href="details/bubble-tea.html" target="_blank" title="Product Details"><img src="/term-project/frontend/images/bubble-tea.webp" alt="Bubble Tea"></a>
+                            <a href="details/bubble-tea.html" target="_blank" title="Product Details"><img src="/images/bubble-tea.webp" alt="Bubble Tea"></a>
                         </div>
                         <h3>Bubble Tea</h3>
                     </div>
     
                     <div class="menu-item">
                         <div class="menu-image">
-                            <a href="details/green-tea.html" target="_blank" title="Product Details"><img src="/term-project/frontend/images/green-tea.webp" alt="Green Tea"></a>
+                            <a href="details/green-tea.html" target="_blank" title="Product Details"><img src="/images/green-tea.webp" alt="Green Tea"></a>
                         </div>
                         <h3>Green Tea</h3>
                     </div>
     
                     <div class="menu-item">
                         <div class="menu-image">
-                            <a href="details/matcha.html" target="_blank" title="Product Details"><img src="/term-project/frontend/images/matcha.webp" alt="Matcha"></a>
+                            <a href="details/matcha.html" target="_blank" title="Product Details"><img src="/images/matcha.webp" alt="Matcha"></a>
                         </div>
                         <h3>Matcha</h3>
                     </div>
     
                     <div class="menu-item">
                         <div class="menu-image">
-                            <a href="details/iced-green-tea.html" target="_blank" title="Product Details"><img src="/term-project/frontend/images/iced-green-tea.webp" alt="Iced Green Tea"></a>
+                            <a href="details/iced-green-tea.html" target="_blank" title="Product Details"><img src="/images/iced-green-tea.webp" alt="Iced Green Tea"></a>
                         </div>
                         <h3>Iced Green Tea</h3>
                     </div>
